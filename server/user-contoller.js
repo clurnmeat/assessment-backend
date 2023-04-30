@@ -28,10 +28,11 @@ module.exports = {
   },
 
   getDesire: (req, res) => {
-    let value = ''
+    // gets desire from input on page
+    let text = `to gather this.... ${req.params.desireBox}, you must give something to someone who does not have, it, which you seek. Good fortune smiles upon you my friend.`
     
-    let text = `to gather this.... ${value}, you must give something to someone who does not have it which you seek. Good fortune.`;
     res.status(200).send(text)
-    
   },
+
+ 
 };

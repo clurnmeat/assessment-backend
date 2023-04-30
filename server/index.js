@@ -3,16 +3,29 @@ const cors = require("cors");
 
 const app = express();
 
+
+// middleware 
 app.use(cors());
 
 app.use(express.json());
 
-const { getCompliment, getFortune, getDesire } = require("./controller");
+
+
+// controllers
+
+const { getCompliment, getFortune, getDesire  } = require("./user-controller");
 
 app.get("/api/compliment", getCompliment);
 
 app.get("/api/fortune", getFortune);
 
-app.post("/api/desire", getDesire);
+app.put("/api/:desireBox", getDesire);
 
+
+
+
+
+
+// server-up
 app.listen(4000, () => console.log("Server running on 4000"));
+app.setMaxListeners(20)
