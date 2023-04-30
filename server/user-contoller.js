@@ -1,3 +1,4 @@
+const nameList = []
 module.exports = {
   getCompliment: (req, res) => {
     const compliments = [
@@ -5,14 +6,14 @@ module.exports = {
       "Cool shirt!",
       "Your Javascript skills are stellar.",
     ];
-
+    
     // choose random compliment
     let randomIndex = Math.floor(Math.random() * compliments.length);
     let randomCompliment = compliments[randomIndex];
-
+    
     res.status(200).send(randomCompliment);
   },
-
+  
   getFortune: (req, res) => {
     const fortunes = [
       `A beautiful, smart, and loving person will be coming into your life.`,
@@ -23,16 +24,52 @@ module.exports = {
     // choose random fortune
     let randomIndex = Math.floor(Math.random() * fortunes.length);
     let randomFortune = fortunes[randomIndex];
-
+    
     res.status(200).send(randomFortune);
   },
-
+  
   getDesire: (req, res) => {
     // gets desire from input on page
-    let text = `to gather this.... ${req.params.desireBox}, you must give something to someone who does not have, it, which you seek. Good fortune smiles upon you my friend.`
+    let text = `to gather this.... ${req.params.desireBox}, you must give something to someone who does not have, it, which you seek. Good fortune smiles upon you my friend.`;
     
-    res.status(200).send(text)
+    res.status(200).send(text);
+  },
+  
+  addDog: (req, res) => {
+    // adds to dog counter
+    let dogcount = req.params.count;
+    res.status(200).send(`${dogcount} User(s) chose your decsion`)
+  },
+  
+  addCat: (req, res) => {
+    // adds to cat counter
+    let catcount = req.params.count;
+    res.status(200).send(`${catcount} User(s) chose your decison`)
+  },
+  
+  presentName: (req, res) => {
+    let names = req.params.name
+    nameList.push(names)
+    let username = ''
+    for(let i=0; i<nameList.length;i++){
+      username = nameList[i]
+    }
+    res.status(200).send(`Hello, ${username} you are the ${nameList.length}`)
+    
+    
   },
 
- 
+  deleteAccount: (req, res) => {
+    let acc = req.params.account
+    for(let i=0;i<nameList.length;i++){
+      if(acc == nameList[i]){
+        nameList.splice(i)
+        res.status(200).send(`We are sad to see you go.`)
+      } else {
+        res.status(404).send(`User not found!`)
+      }
+    }
+    
+    
+  }
 };

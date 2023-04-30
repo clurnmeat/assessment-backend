@@ -1,0 +1,57 @@
+*{
+    
+    display: flexbox;
+    flex-direction: column;
+    
+}
+
+
+#dog-button{
+    position: relative;
+    border: 0px;
+    top: 5px;
+    margin: 0px;
+}
+
+
+#dog-button>img{
+    margin: 10px;
+    max-width: 300px;
+    max-height: 250px;
+}
+
+
+#cat-button{
+    padding: 10px;
+    position: relative;
+    border: 0px;
+    top: 5px;
+    height: max-content;
+    margin: auto;
+    left: 450px;
+    bottom: 350px
+}
+
+
+#cat-button>img{
+
+    max-width: 320.3px;
+    height: auto;
+    padding: 0px;
+    
+}
+
+.container {
+    display: flexbox;
+    flex-direction: row-reverse;
+}
+
+#name {
+    margin: 50px;
+}
+
+
+#big-red-button {
+    background-color: red;
+    color: white;
+}

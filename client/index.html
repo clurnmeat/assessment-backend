@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Back End Assessment</title>
   </head>
   <body class="container">
@@ -10,10 +11,60 @@
     </div>
     <section class="container">
       <div>
-        <label for="answerbox">What do you most desire?</label>
-        <input type="text" name="answerbox" id="answerbox"><button type="submit" id="desire-submit">Submit</button>
+        <form action="" method="get" id="desire-form">
+          <label for="answerbox">What do you most desire?</label>
+          <input type="text" value="" id="answerbox">
+          <button type="button" id="desire-submit">Submit</button>
+        </form>
       </div>
     </section>
+    <section class="container">
+      <div>
+          <label for="big-red-button">
+            <a href="./blankpage.html"><button id="big-red-button">DO NOT PRESS ME!!!</button></a>
+          </label>
+        </div>
+    </section>
+    <title>Who will win..</title>
+    <section class="container">
+      <div id="dog-section">
+        <button id="dog-button">
+          <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg" alt="dog picture">
+        </button>
+        <label for="dog-button"> Are you a dog Person?</label>
+      <div id="cat-section">
+        <label for="cat-button">Are you a cat Person?</label>
+        <button id="cat-button">
+          <img src="https://imageserver.petsbest.com/marketing/blog/catnip-effects-on-cats.jpg" alt="cat picture" srcset="">
+        </button>
+      </div>
+      </div>
+    </section>
+    <section class="container">
+      <form action="" method="post" id="name-form">
+        <div>
+          <label for="name">What is your name?</label>
+          <input type="text" name="" id="name">
+          <button id="name-submit" type="button">
+            Submit
+            <a href=""></a>
+          </button>
+        </div>
+      </form>
+      <section class="container">
+        <div>
+          <label for="name-to-delete">Would you like to delete your name from the list?</label>
+            <input type="text" id="name-to-delete">
+            <button id="delete-account">YES</button>
+            <button id="no-button">
+              NO
+              <a href="./index.html"></a>
+            </button>
+            </input>
+      </div>
+      </section>
+    </section>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
